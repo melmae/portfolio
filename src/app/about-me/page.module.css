@@ -1,0 +1,27 @@
+.about {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+
+    p {
+        font-size: 1.25rem;
+        margin-block: 20px;
+        line-height: 1.5;
+    }
+}
+
+.left {
+    margin-block: 20px;
+    align-self: center;
+
+    img {
+        height: 200px;
+        border-radius: 9999px;
+    }
+
+    a {
+        display: block;
+        text-decoration: underline;
+        margin-block: 10px;
+    }
+}

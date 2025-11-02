@@ -1,0 +1,22 @@
+{
+  "projects": [
+    {
+      "name": "Shut the Box",
+      "tech": ["Javascript"],
+      "url": "https://melmae.github.io/shut-the-box/",
+      "image": "ShutTheBox-screenshot.png"
+    },
+    {
+      "name": "AniDash",
+      "tech": ["React", "Shadcn", "Tanstack Router"],
+      "url": "https://melmae.github.io/ani-dash/",
+      "image": "./AniDash-screenshot.png"
+    },
+    {
+      "name": "Wordle",
+      "tech": ["Javascript"],
+      "url": "https://melmae.github.io/wordle/",
+      "image": "Wordle-screenshot.png"
+    }
+  ]
+}

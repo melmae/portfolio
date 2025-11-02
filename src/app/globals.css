@@ -1,0 +1,55 @@
+:root {
+  --background: #FBF4EF;
+  --foreground: #333533;
+
+  --black: #efd5c3;
+  --accent: #96616B;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #333533;
+    --foreground: #efd5c3;
+
+    --black: #000000;
+    --accent: #96616B;
+  }
+}
+
+html,
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+hr {
+  border-color: var(--accent);
+  margin-bottom: 5px;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
