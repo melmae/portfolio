@@ -23,7 +23,7 @@ export default function ConnectPage() {
                 </li>
             </ul>
             <p>Interested in my resume? Download it here!</p>
-            <a href={"./Melissa-Schmidt-2025.pdf"} download>
+            <a href={"./Melissa-Schmidt-Software-Engineer.pdf"} download>
                 <button>Download</button>
             </a>
         </div>
