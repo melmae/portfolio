@@ -1,12 +1,31 @@
 import styles from './page.module.css';
+import {Github, Linkedin, Mail} from "lucide-react";
 
 export default function AboutMe() {
     return (
         <div className={styles.about}>
             <div className={styles.left}>
                 <img src={"profile-pic.jpg"} alt={"Profile picture"} />
-                <a href={"https://www.linkedin.com/in/mschmidt00/"} target={"_blank"}>linkedin.com/in/mschmidt00</a>
-                <a href={"https://github.com/melmae"} target={"_blank"}>github.com/melmae</a>
+                <ul>
+                    <li>
+                        <a href={"mailto:mmschmidt00@gmail.com"}>
+                            <Mail />
+                            mmschmidt00@gmail.com
+                        </a>
+                    </li>
+                    <li>
+                        <a href={"https://www.linkedin.com/in/mschmidt00/"} target={"_blank"}>
+                            <Linkedin />
+                            linkedin.com/in/mschmidt00
+                        </a>
+                    </li>
+                    <li>
+                        <a href={"https://github.com/melmae"} target={"_blank"}>
+                            <Github />
+                            github.com/melmae
+                        </a>
+                    </li>
+                </ul>
             </div>
             <div>
                 <p>

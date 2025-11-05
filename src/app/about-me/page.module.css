@@ -19,9 +19,21 @@
         border-radius: 9999px;
     }
 
+    ul {
+        list-style: none;
+    }
+
+    li {
+        margin-block: 5px;
+    }
+
+    svg {
+        margin-right: 10px;
+    }
+
     a {
-        display: block;
         text-decoration: underline;
-        margin-block: 10px;
+        display: flex;
+        align-items: center;
     }
 }
