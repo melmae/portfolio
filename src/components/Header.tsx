@@ -7,7 +7,7 @@ export function Header() {
                 width: "100%",
                 height: "48px",
                 background: "var(--black)",
-                color: "var(--foreground)",
+                color: "#F2F2F2",
                 display: "flex",
                 flexDirection: "row",
                 gap: "30px",
