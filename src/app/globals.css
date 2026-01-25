@@ -6,9 +6,9 @@
 
   --secondaryText: #999999;
 
-  --teal: #0E5A6B;
-  --rust: #8C3D26;
-  --purple: #3F355F;
+  --teal: #136C80;
+  --rust: #A24A2F;
+  --purple: #544A85;
 
   --black: #26292C;
   --accent: #0E5A6B;
@@ -34,6 +34,7 @@ body {
   font-family: var(--font-sans), sans-serif;
 
   width: 100vw;
+  overflow-y: auto;
   overflow-x: hidden;
 }
 
@@ -67,6 +68,9 @@ h1 {
   font-size: 36px;
   line-height: 1.3;
   font-weight: 600;
+  font-variation-settings:
+          "WONK" 1,
+          "opsz" 144;
 }
 
 h2 {
@@ -74,6 +78,9 @@ h2 {
   font-size: 24px;
   line-height: 1;
   font-weight: 400;
+  font-variation-settings:
+          "WONK" 1,
+          "opsz" 144;
 }
 
 @media (prefers-color-scheme: dark) {

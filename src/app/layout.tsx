@@ -27,7 +27,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={sourceSans3.className}>
-        <Header/>
+        <header>
+          <Header/>
+        </header>
         <div style={{flexGrow: 1, width: '80%', padding: '20px', alignSelf: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
           {children}
         </div>
