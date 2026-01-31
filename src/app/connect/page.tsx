@@ -4,7 +4,7 @@ import {Github, Linkedin, Mail} from "lucide-react";
 export default function ConnectPage() {
     return (
         <div className={styles.page}>
-            <h2>Thanks for connecting with me at GHC 2025!</h2>
+            <h2>Thanks for connecting with me!</h2>
             <hr />
             <h3 style={{color: 'var(--accent)'}}>Melissa Schmidt - Software Engineer</h3>
             <p>This site is what I currently call my portfolio, so go ahead and take a look around.</p>

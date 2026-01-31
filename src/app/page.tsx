@@ -4,7 +4,7 @@ import ProjectShowcase from "@/components/ProjectShowcase";
 export default function Home() {
   return (
     <div className={styles.page}>
-        <div style={{height: 'calc(100vh - 48px)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '20px', textAlign: 'center'}}>
+        <div className={styles.intro}>
             <h1>I’m Melissa.</h1>
             <h2 style={{fontWeight: '250'}}>A software engineer exploring how <span style={{color: 'var(--purple)', fontStyle: 'italic', letterSpacing: '1px', fontWeight: '500'}}>thoughtful design</span> and <span style={{color: 'var(--teal)', fontWeight: '700'}}>solid engineering</span> meet.</h2>
         </div>

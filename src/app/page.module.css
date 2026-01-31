@@ -1,5 +1,5 @@
 .page {
-  width: 70%;
+  max-width: 70%;
   align-self: center;
   display: flex;
   flex-direction: column;
@@ -19,4 +19,15 @@
   justify-content: space-between;
   background-color: var(--foreground);
   padding: 120px 60px;
+}
+
+.intro {
+  padding-top: clamp(8rem, 30vh, 12rem);
+  padding-bottom: clamp(8rem, 15vh, 12rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
 }

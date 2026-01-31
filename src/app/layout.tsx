@@ -27,10 +27,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={sourceSans3.className}>
+        <div className="edge-style" />
         <header>
           <Header/>
         </header>
-        <div style={{flexGrow: 1, width: '80%', padding: '20px', alignSelf: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        <div className="content">
           {children}
         </div>
       </body>

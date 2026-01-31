@@ -29,22 +29,61 @@
   }
 }
 
-html,
-body {
+html, body {
   font-family: var(--font-sans), sans-serif;
-
+  position: relative;
   width: 100vw;
+  height: 100vh;
   overflow-y: auto;
-  overflow-x: hidden;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
+  overflow-x: auto;
+  background-color: var(--background);
   color: var(--foreground);
-  background: var(--background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("/portfolio/noise.png");
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.edge-style {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
+  background:
+      linear-gradient(
+              to right,
+              rgba(14, 90, 107, 0.2),
+              transparent 20%,
+              transparent 80%,
+              rgba(73, 61, 112, 0.3)
+      );
+}
+
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
 }
 
 * {
@@ -76,7 +115,7 @@ h1 {
 h2 {
   font-family: var(--font-serif), serif;
   font-size: 24px;
-  line-height: 1;
+  line-height: 1.25;
   font-weight: 400;
   font-variation-settings:
           "WONK" 1,
@@ -86,5 +125,20 @@ h2 {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+
+  body::before {
+    opacity: 0.1;
+  }
+
+  .edge-style {
+    background:
+            linear-gradient(
+                    to right,
+                    rgba(14, 90, 107, 0.15),
+                    transparent 20%,
+                    transparent 80%,
+                    rgba(73, 61, 112, 0.15)
+            );
   }
 }
