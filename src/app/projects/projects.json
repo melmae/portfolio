@@ -14,7 +14,7 @@
     },
     {
       "name": "Wordle",
-      "tech": ["Javascript"],
+      "tech": ["Svelte"],
       "url": "https://melmae.github.io/wordle/",
       "image": "Wordle-screenshot.png"
     }

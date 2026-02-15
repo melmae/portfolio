@@ -23,7 +23,7 @@
 
 .intro {
   padding-top: clamp(8rem, 30vh, 12rem);
-  padding-bottom: clamp(8rem, 15vh, 12rem);
+  padding-bottom: clamp(8rem, 30vh, 12rem);
   display: flex;
   flex-direction: column;
   align-items: center;

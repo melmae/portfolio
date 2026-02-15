@@ -1,0 +1,23 @@
+.card {
+    background: #EFEFEF;
+    border-radius: 12px;
+    transition: box-shadow 200ms ease;
+
+    box-shadow:
+            0 6px 16px rgba(0,0,0,0.06),
+            0 1px 2px rgba(0,0,0,0.05);
+
+    border: 1px solid rgba(0,0,0,0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+    .card {
+        background: #2b2f33;
+
+        box-shadow:
+                0 6px 16px rgba(0,0,0,0.4),
+                0 1px 2px rgba(0,0,0,0.3);
+
+        border: 1px solid rgba(255,255,255,0.05);
+    }
+}
