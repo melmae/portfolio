@@ -3,7 +3,7 @@ import TechTag from "@/components/TechTag";
 import {ReactNode} from "react";
 
 interface ProjectShowcaseProps {
-    image: {src: string; alt: string};
+    image?: {src: string; alt: string};
     title: string;
     teaser: string;
     extras?: ReactNode;
@@ -25,7 +25,7 @@ export default function ProjectShowcase({image, title, teaser, extras, position,
                 justifyContent: 'center',
             }}
         >
-            <img src={image.src} alt={image.alt} style={{width: '100%'}} />
+            {image && <img src={image.src} alt={image.alt} style={{width: '100%'}}/>}
             <div>
                 <h1>{title}</h1>
                 <p style={{color: 'var(--secondaryText)', paddingBlock: '10px'}}>{teaser}</p>

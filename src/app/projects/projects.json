@@ -4,19 +4,33 @@
       "name": "Shut the Box",
       "tech": ["Javascript"],
       "url": "https://melmae.github.io/shut-the-box/",
-      "image": "ShutTheBox-screenshot.png"
+      "image": "ShutTheBox-screenshot.png",
+      "importance": "minor",
+      "type": "personal"
     },
     {
       "name": "AniDash",
       "tech": ["React", "Shadcn", "Tanstack Router"],
       "url": "https://melmae.github.io/ani-dash/",
-      "image": "./AniDash-screenshot.png"
+      "image": "./AniDash-screenshot.png",
+      "importance": "minor",
+      "type": "personal"
     },
     {
       "name": "Wordle",
       "tech": ["Svelte"],
       "url": "https://melmae.github.io/wordle/",
-      "image": "Wordle-screenshot.png"
+      "image": "Wordle-screenshot.png",
+      "importance": "minor",
+      "type": "learning"
+    },
+    {
+      "name": "MV2 Design System",
+      "tech": ["React", "TypeScript", "styled-components"],
+      "url": null,
+      "image": null,
+      "importance": "major",
+      "type": "work"
     }
   ]
 }

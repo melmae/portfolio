@@ -18,7 +18,7 @@ export function Header() {
             }}
         >
             <Link href="/">Home</Link>
-            <Link href="/projects">Projects</Link>
+            <Link href="/projects">Studio</Link>
             <Link href="/about-me">About Me</Link>
         </nav>
     )

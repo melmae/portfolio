@@ -8,17 +8,31 @@ export default function Home() {
             <h1>I’m Melissa.</h1>
             <h2 style={{fontWeight: '250'}}>A software engineer exploring how <span style={{color: 'var(--purple)', fontStyle: 'italic', letterSpacing: '1px', fontWeight: '500'}}>thoughtful design</span> and <span style={{color: 'var(--teal)', fontWeight: '700'}}>solid engineering</span> meet.</h2>
         </div>
+        {/*<ProjectShowcase*/}
+        {/*    position={"primary"}*/}
+        {/*    image={{src: '../portfolio/AniDash-screenshot-limited.png', alt: 'Wordle'}}*/}
+        {/*    title={"AniDash"}*/}
+        {/*    teaser={"Visualizing anime and manga habits my way, with custom stats and a sleek interface."}*/}
+        {/*    tags={["React", "TypeScript", "Vite", "Tanstack Router", "Shadcn"]}*/}
+        {/*    extras={(*/}
+        {/*        <ul style={{padding: '10px 20px', color: 'var(--secondaryText)', fontSize: '.85rem'}}>*/}
+        {/*            <li style={{paddingBlock: '5px'}}>Integrated a third-party GraphQL API and shaped responses for client-side use</li>*/}
+        {/*            <li style={{paddingBlock: '5px'}}>Introduced TanStack Query to handle caching and mitigate rate limiting</li>*/}
+        {/*            <li style={{paddingBlock: '5px'}}>Recreated AniList’s visual language using Shadcn while maintaining accessibility</li>*/}
+        {/*        </ul>*/}
+        {/*    )}*/}
+        {/*/>*/}
         <ProjectShowcase
             position={"primary"}
-            image={{src: '../portfolio/AniDash-screenshot-limited.png', alt: 'Wordle'}}
-            title={"AniDash"}
-            teaser={"Visualizing anime and manga habits my way, with custom stats and a sleek interface."}
-            tags={["React", "TypeScript", "Vite", "Tanstack Router", "Shadcn"]}
+            title={"MV2 Design System"}
+            tags={["React", "TypeScript", "Vite", "styled-components", "Recharts"]}
+            teaser={"A design system built to improve UI consistency and streamline development across a growing application."}
             extras={(
                 <ul style={{padding: '10px 20px', color: 'var(--secondaryText)', fontSize: '.85rem'}}>
-                    <li style={{paddingBlock: '5px'}}>Integrated a third-party GraphQL API and shaped responses for client-side use</li>
-                    <li style={{paddingBlock: '5px'}}>Introduced TanStack Query to handle caching and mitigate rate limiting</li>
-                    <li style={{paddingBlock: '5px'}}>Recreated AniList’s visual language using Shadcn while maintaining accessibility</li>
+                    <li style={{paddingBlock: '5px'}}>Built reusable, composable components to support consistent UI patterns</li>
+                    <li style={{paddingBlock: '5px'}}>Balanced flexibility with structure to support evolving product needs</li>
+                    <li style={{paddingBlock: '5px'}}>Established design tokens to ensure consistent styling across the application</li>
+                    <li style={{paddingBlock: '5px'}}>Implemented internationalization support to enable scalable, global-ready UI</li>
                 </ul>
             )}
         />
