@@ -1,0 +1,83 @@
+.dialog {
+    /* globals.css has `* { margin: 0 }`, which kills the UA dialog centering — restore it */
+    inset: 0;
+    margin: auto;
+    width: min(1100px, 92vw);
+    height: min(85vh, 860px);
+    max-width: 92vw;
+    max-height: 88vh;
+    padding: 0;
+    /* Self-contained theme: the projects page overrides --foreground to #000 in dark mode */
+    border: 1px solid rgba(127, 127, 127, 0.4);
+    border-radius: 12px;
+    background: #F2F2F2;
+    color: #26292C;
+    overflow: hidden;
+
+    box-shadow:
+            0 24px 60px rgba(0, 0, 0, 0.28),
+            0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+@media (prefers-color-scheme: dark) {
+    .dialog {
+        background: #26292C;
+        color: #F2F2F2;
+    }
+}
+
+.dialog::backdrop {
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(2px);
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.toolbar {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 14px;
+    border-bottom: 1px solid rgba(127, 127, 127, 0.25);
+}
+
+.title {
+    font-family: var(--font-serif), serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.close {
+    flex-shrink: 0;
+    height: 34px;
+    width: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    line-height: 1;
+    border: 1px solid rgba(127, 127, 127, 0.4);
+    border-radius: 50%;
+    background: rgba(127, 127, 127, 0.12);
+    color: inherit;
+    cursor: pointer;
+    transition: background 150ms ease, border-color 150ms ease;
+}
+
+.close:hover {
+    background: rgba(127, 127, 127, 0.28);
+    border-color: rgba(127, 127, 127, 0.7);
+}
+
+.frame {
+    flex-grow: 1;
+    width: 100%;
+    border: 0;
+    background: #fff;
+}

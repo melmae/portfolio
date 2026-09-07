@@ -122,6 +122,24 @@ h2 {
           "opsz" 144;
 }
 
+input[type=text] {
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  border: 1px solid var(--secondaryText);
+  padding-inline: 4px;
+
+  &::placeholder {
+    color: var(--secondaryText);
+  }
+}
+
+select {
+  border-radius: 8px;
+  font-size: 14px;
+  border: 1px solid var(--secondaryText)
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

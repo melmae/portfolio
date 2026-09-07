@@ -1,14 +1,47 @@
+"use client";
+
+import {useEffect, useRef} from "react";
+import styles from "./ProjectModal.module.css";
+
 interface ProjectModalProps {
     url: string;
     open: boolean;
     onClose: () => void;
+    title?: string;
 }
 
-export function ProjectModal({url, open, onClose}: ProjectModalProps) {
+export function ProjectModal({url, open, onClose, title}: ProjectModalProps) {
+    const dialogRef = useRef<HTMLDialogElement>(null);
+
+    useEffect(() => {
+        const dialog = dialogRef.current;
+        if (!dialog) return;
+
+        if (open && !dialog.open) {
+            dialog.showModal();
+        } else if (!open && dialog.open) {
+            dialog.close();
+        }
+    }, [open]);
+
     return (
-        <dialog open={open} style={{height: '90%', width: '90%', top: '5%', left: '5%', position: 'fixed', borderRadius: '10px', border: '2px solid var(--foreground)'}} onClose={onClose}>
-            <button style={{position: "absolute", height: "48px", width: '48px'}} onClick={onClose}>x</button>
-            <iframe src={url} style={{height: '100%', width: '100%'}} />
+        <dialog
+            ref={dialogRef}
+            className={styles.dialog}
+            onClose={onClose}
+            onClick={(e) => {
+                if (e.target === dialogRef.current) onClose();
+            }}
+        >
+            <div className={styles.inner}>
+                <div className={styles.toolbar}>
+                    <span className={styles.title}>{title}</span>
+                    <button className={styles.close} onClick={onClose} aria-label="Close preview">
+                        &times;
+                    </button>
+                </div>
+                {open && <iframe className={styles.frame} src={url} title={title ?? "Project preview"} />}
+            </div>
         </dialog>
-    )
+    );
 }

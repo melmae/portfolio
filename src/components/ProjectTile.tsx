@@ -17,24 +17,11 @@ export function ProjectTile({name, onClick, importance, type}: ProjectTileProps)
 
     return (
         <div
-            className={styles.card}
-            style={{
-                height: '200px',
-                width: '200px',
-                // borderRadius: '10px',
-                // border: '2px solid black',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '10px',
-                padding: '10px',
-            }}
+            className={`${styles.card} ${styles[importance] ?? styles.minor} ${styles[typeVals[type].color]}`}
             onClick={onClick}
         >
-            <h3>{name}</h3>
+            <h3 className={styles.name}>{name}</h3>
             <p className={`${styles.tag} ${styles[typeVals[type].color]}`}>{typeVals[type].text}</p>
-            {/*<img src={image} alt={name} style={{ width: '100%', borderRadius: '5px', border: '1px solid var(--foreground)' }} />*/}
         </div>
     )
 }

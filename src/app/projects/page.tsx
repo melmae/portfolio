@@ -9,15 +9,15 @@ import styles from "./page.module.css";
 const techList = [...new Set(projects.projects.flatMap(p => p.tech))];
 
 export default function Projects() {
-    const [projectPreview, setProjectPreview] = useState({open: false, url: ""});
+    const [projectPreview, setProjectPreview] = useState({open: false, url: "", title: ""});
     const [filter, setFilter] = useState({search: "", tech: techList, type: ""});
 
-    function openPreview(url: string) {
-        setProjectPreview({open: true, url: url});
+    function openPreview(url: string, title: string) {
+        setProjectPreview({open: true, url: url, title: title});
     }
 
     function closePreview() {
-        setProjectPreview({open: false, url: ""});
+        setProjectPreview(prev => ({...prev, open: false}));
     }
 
     function updateTechFilter(e: { target: { checked: any; value: string; }; }) {
@@ -65,11 +65,11 @@ export default function Projects() {
                         name={project.name}
                         importance={project.importance as any}
                         type={project.type as any}
-                        onClick={() => project.url && openPreview(project.url)}
+                        onClick={() => project.url && openPreview(project.url, project.name)}
                     />
                 ))}
             </div>
-            <ProjectModal open={projectPreview.open} url={projectPreview.url} onClose={closePreview} />
+            <ProjectModal open={projectPreview.open} url={projectPreview.url} title={projectPreview.title} onClose={closePreview} />
         </div>
     );
 }

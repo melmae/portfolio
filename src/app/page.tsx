@@ -39,10 +39,10 @@ export default function Home() {
         <div style={{display: 'flex', flexDirection: 'row', gap: '40px'}}>
             <ProjectShowcase
                 position={"secondary"}
-                image={{src: '../portfolio/Wordle-screenshot-limited.png', alt: 'Wordle'}}
-                title={"Wordle"}
-                teaser={"Recreated my own Wordle in Svelte, paying attention to small details that shape the user experience."}
-                tags={["Svelte", "Vite"]}
+                image={{src: '../portfolio/bokchoy-screenshot.jpg', alt: 'bok-choy book app'}}
+                title={"bok-choy"}
+                teaser={"A deliberately simple reading and library tracker in one, built as a React Native app. The app I couldn't find, so I made it myself."}
+                tags={["React Native", "TypeScript"]}
             />
             <ProjectShowcase
                 position={"secondary"}
